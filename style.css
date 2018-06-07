@@ -1,7 +1,16 @@
 body {
+  padding-top: 50px;
+  background: #aacc99;
   text-align: center;
+  font-family: 'VT323', monospace;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
 }
 
 canvas {
-  border: solid;
+  border: solid 4px;
 }
