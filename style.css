@@ -14,3 +14,10 @@ h1 {
 canvas {
   border: solid 4px;
 }
+
+.info {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.5em;
+}

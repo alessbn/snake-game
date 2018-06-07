@@ -117,6 +117,8 @@
 		}
 
 		eat(){
+			score += 5
+			info.innerHTML = score
 			this.head.add()
 		}
 
@@ -147,6 +149,8 @@
 	const canvas = document.getElementById('canvas')
 	const ctx = canvas.getContext('2d')
 	const snake = new Snake()
+	const info = document.getElementById('score');
+	let score = 0
 	let foods = []
 	window.addEventListener("keydown", function(ev){
 		if(ev.KeyCode > 36 && ev.KeyCode < 41) ev.preventDefault()
