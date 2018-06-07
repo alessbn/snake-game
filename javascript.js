@@ -70,7 +70,7 @@
 		}
 
 		hitBorder(){
-			return this.x > 480 || this.x < 0 || this.y > 280 || this.y < 0
+			return this.x > 490 || this.x < 0 || this.y > 290 || this.y < 0
 		}
 	}
 
@@ -164,8 +164,11 @@
 		drawFood()
 
 		if(snake.dead()){
-			console.log("Game Over")
 			window.clearInterval(animation)
+			ctx.clearRect(0,0,canvas.width,canvas.height)
+			ctx.font = '30px "Press Start 2P"';
+			ctx.textAlign = "center";
+			ctx.fillText("Game Over!", canvas.width/2, canvas.height/2);
 		}
 	},1000/5)
 
