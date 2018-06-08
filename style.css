@@ -3,21 +3,33 @@ body {
   background: #aacc99;
   text-align: center;
   font-family: 'VT323', monospace;
+  font-size: 1.5em;
 }
 
 h1 {
   margin-bottom: 50px;
   font-family: 'Press Start 2P', cursive;
   font-weight: 400;
+  font-size: 1.5em;
 }
 
 canvas {
   border: solid 4px;
 }
 
-.info {
+.game__message {
   width: 500px;
   margin: 0 auto;
   text-align: left;
-  font-size: 1.5em;
+}
+
+#msg--over {
+  text-align: center;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
