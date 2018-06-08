@@ -117,16 +117,15 @@
 		}
 
 		eat(){
-			score += 5
-			msgScore.innerHTML = score
 			this.head.add()
+			score += 5
+			document.getElementById('msg--score').innerHTML = score
 		}
 
 		dead(){
 			return this.head.hit(this.head) || this.head.hitBorder()
 		}
 	}
-
 
 	class Food{
 		constructor(x,y){
@@ -145,12 +144,9 @@
 		}
 	}
 
-
 	const canvas = document.getElementById('canvas')
 	const ctx = canvas.getContext('2d')
 	const snake = new Snake()
-	const msgScore = document.getElementById('msg--score');
-	const msgOver = document.getElementById('msg--over');
 	let score = 0
 	let foods = []
 	window.addEventListener("keydown", function(ev){
@@ -174,7 +170,8 @@
 			ctx.font = '30px "Press Start 2P"';
 			ctx.textAlign = "center";
 			ctx.fillText("Game Over!", canvas.width/2, canvas.height/2);
-			msgOver.innerHTML = "Press F5 to start a new game"
+			document.getElementById('msg--instructions').remove()
+			document.getElementById('msg--over').innerHTML = "Press F5 to start a new game"
 		}
 	},1000/5)
 
